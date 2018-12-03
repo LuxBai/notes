@@ -1,0 +1,26 @@
+基础数据结构：
+	字符串、list、set、hash、zset
+	字符串：
+		动态分配扩容，小于1M时一倍扩容、大于1M按1M增量扩容，最大512M
+		
+	list
+		相当于链表，可做队列、栈
+		队列 右进左出 rpush java python go	lpop java
+		栈	 右进右出 rpush java python go	rpop java
+		lindex index 相当于 get(index) 时间复杂度为O(n)
+		lrange start end 获取范围内的元素 end可为复数 -1表示倒数第一位 -2表示倒数第二位
+		ltrim start end	  删除范围之外的元素，实现一个定长的链表,可清空list  ltrim 1 0
+		list内部为 多个ziplsit相互连接，每个ziplist为连续内存
+		
+	hash
+		相当于java中的hashmap，rehash时为渐进式hash，保留旧的同时rehash，查找时同时查找新旧两个
+		hmset books java "effective java" python "learning python" golang "modern golang programming" 
+	set
+		相当于java中的hashset，去重、无顺序、
+		
+		
+		
+		redisutil
+		springcache
+		
+		
